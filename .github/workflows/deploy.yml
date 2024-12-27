@@ -18,7 +18,9 @@ jobs:
         env:
           PERSONAL_ACCESS_TOKEN: ${{ secrets.PERSONAL_ACCESS_TOKEN }}
         run: |
-          git clone https://$PERSONAL_ACCESS_TOKEN@github.com/cassiocostawk/Estudo.git docs
+          git clone https://$PERSONAL_ACCESS_TOKEN@github.com/cassiocostawk/Estudo.git temp
+          cp -r temp/* docs/
+          rm -rf temp
 
       - name: Setup Node.js
         uses: actions/setup-node@v2
