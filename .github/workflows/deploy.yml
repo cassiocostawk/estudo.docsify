@@ -19,9 +19,7 @@ jobs:
           PERSONAL_ACCESS_TOKEN: ${{ secrets.PERSONAL_ACCESS_TOKEN }}
         run: |
           git clone https://$PERSONAL_ACCESS_TOKEN@github.com/cassiocostawk/Estudo.git content
-          mkdir temp
-          cp -r content/* temp/
-          cp -r docs/* temp/
+          cp -r content/* docs/
 
       - name: Setup Node.js
         uses: actions/setup-node@v2
@@ -34,11 +32,8 @@ jobs:
       - name: Build Docsify site
         run: docsify init ./docs
 
-      - name: Copy generated files to docs directory
-        run: cp -r temp/* docs/*
-
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.PERSONAL_ACCESS_TOKEN }}
-          publish_dir: .
+          publish_dir: ./docs
