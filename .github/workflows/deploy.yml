@@ -34,9 +34,6 @@ jobs:
       - name: Remove temp
         run: rm -rf temp
 
-      - name: Build Docsify site
-        run: docsify init ./docs
-
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
         with:
