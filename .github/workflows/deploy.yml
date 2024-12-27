@@ -23,9 +23,6 @@ jobs:
       - name: Copy files
         run: cp -r temp/* docs/
 
-      - name: Remove temp folder
-        run: rm -rf temp
-
       - name: Setup Node.js
         uses: actions/setup-node@v2
         with:
