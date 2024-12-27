@@ -33,7 +33,9 @@ jobs:
 
       - name: Copy temp to Docs
         run: cp -r temp/* docs/
-          rm -rf temp
+      
+      - name: Remove temp
+        run: rm -rf temp
 
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
