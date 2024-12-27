@@ -34,6 +34,9 @@ jobs:
       - name: Build Docsify site
         run: docsify init ./docs
 
+      - name: Copy generated files to docs directory
+        run: cp -r docs/* .
+
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
         with:
