@@ -19,7 +19,7 @@ jobs:
           PERSONAL_ACCESS_TOKEN: ${{ secrets.PERSONAL_ACCESS_TOKEN }}
         run: |
           git clone https://$PERSONAL_ACCESS_TOKEN@github.com/cassiocostawk/Estudo.git content
-          mkdir -p docs/_content
+          mkdir -p docs/docs
           cp -r content/* docs/docs/
 
       - name: Setup Node.js
@@ -36,5 +36,5 @@ jobs:
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
         with:
-          github_token: ${{ secrets.PERSONAL_ACCESS_TOKEN }}
+          github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./docs
