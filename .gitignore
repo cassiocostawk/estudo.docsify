@@ -1,6 +1,5 @@
-# Ignorar pastas que começam com .
-.*
-!.gitignore
+.crossnote
+.deprecated
 
 # Ignorar tudo na pasta docs, exceto arquivos que começam com _
 docs/*
