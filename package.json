@@ -1,0 +1,19 @@
+{
+  "name": "docsify-app",
+  "version": "1.0.0",
+  "description": "A Docsify application for serving documentation.",
+  "main": "index.html",
+  "scripts": {
+    "start": "docsify serve docs",
+    "init": "docsify init ./docs",
+    "build": "docsify init ./docs"
+  },
+  "dependencies": {
+    "mermaid": "^11.4.1"
+  },
+  "devDependencies": {
+    "docsify-cli": "^4.0.0"
+  },
+  "author": "",
+  "license": "MIT"
+}

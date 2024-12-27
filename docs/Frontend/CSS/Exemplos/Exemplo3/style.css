@@ -1,0 +1,22 @@
+/* todas as tags */
+* {
+    /* não soma padding ao width e height (primeiros setup de um projeto) */
+    box-sizing: border-box;
+}
+
+.big-box {
+    width: 200px;
+    height: 200px;
+    background-color: lightblue;
+
+    /* espacamento interno do elemento */
+    /* aumenta o width e height do elemento, por isso usa-se o border-box */
+    padding: 20px;
+
+    /* espacamento externo do elemento */
+    margin: 20px 20px 20px 20px; /* em relógio - top, right, bottom, left */
+
+    /* permite empilhamento a direita */
+    /* padrão é block - não empilha a direita (quebra a linha automatico) */
+    display: inline-block;    
+}

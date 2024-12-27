@@ -1,0 +1,5 @@
+.crossnote
+.deprecated
+
+# Ignorar node_modules
+node_modules/

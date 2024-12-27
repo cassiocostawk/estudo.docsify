@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Docsify App</title>
+    <!-- <link id="theme-style" rel="stylesheet" href="dark.css"> -->
+    <!-- <link rel="stylesheet" href="dark-colors.css"> -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsify-themeable@0/dist/css/theme-simple-dark.css">
+  </head>
+  <body>
+    <div id="app"></div>
+    <button onclick="toggleTheme()">Toggle Theme</button>
+    <script src="//unpkg.com/docsify/lib/docsify.min.js"></script>
+    <script src="node_modules/mermaid/dist/mermaid.min.js"></script>
+    <script src="//cdn.jsdelivr.net/npm/prismjs/prism.js"></script>
+    <script src="//cdn.jsdelivr.net/npm/prismjs/components/prism-csharp.min.js"></script>
+    <script src="//cdn.jsdelivr.net/npm/prismjs/components/prism-javascript.min.js"></script>
+    <script>
+      window.$docsify = {
+        loadSidebar: true,
+        basePath: "/docs",
+        relativePath: true,
+        mermaid: {
+          theme: "dark",
+        },
+        plugins: [
+          function (hook, vm) {
+            hook.doneEach(function () {
+              Prism.highlightAll();
+            });
+          }
+        ]
+      };
+      mermaid.initialize({ startOnLoad: true });
+
+      function toggleTheme() {
+        const themeStyle = document.getElementById("theme-style");
+        if (themeStyle.getAttribute("href") === "dark.css") {
+          themeStyle.setAttribute("href", "light.css");
+        } else {
+          themeStyle.setAttribute("href", "dark.css");
+        }
+      }
+    </script>
+  </body>
+</html>

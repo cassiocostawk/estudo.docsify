@@ -1,0 +1,24 @@
+.box-one > .title {
+    color: blue;
+}
+
+.box-two > .title {
+    color: green;
+}
+
+.box-one {
+    width: 400px;
+    height: 100px;
+    border: 5px solid darkblue;
+}
+
+.box-two {
+    width: 400px;
+    height: 100px;
+    border: 5px solid darkgreen;
+}
+
+/* não sobrescreve por causa da especificidade, mesmo CSS sendo cascade */
+.title {
+    color: red;
+}

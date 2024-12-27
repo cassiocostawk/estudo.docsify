@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="box">
+      <h1>CSS só no Box</h1>
+    </div>
+    <!-- CSS = .box .titulos -->
+    <div class="box">
+      <div class="box-inside">
+        <h2 class="titulos">CSS usando class - herança indireta</h2>
+      </div>
+    </div>
+    <!-- CSS = .box > .titulos (mais recomendado) -->
+    <div class="box">
+      <h2 class="titulos">CSS usando class - herança direta</h2>
+    </div>
+    <div class="box">
+      <h2 id="titulo3">CSS usando ID</h2>
+    </div>
+    <h2 class="titulos">CSS direto</h2>
+  </body>
+</html>
