@@ -13,16 +13,21 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v2
 
+      - name: Clone content repository
+        run: |
+          git clone https://github.com/cassiocostawk/Estudo.git content
+          cp -r content/* docs/
+
       - name: Setup Node.js
         uses: actions/setup-node@v2
         with:
           node-version: '14'
 
-      - name: Install dependencies
-        run: npm install
+      - name: Install Docsify CLI
+        run: npm install -g docsify-cli
 
       - name: Build Docsify site
-        run: npm run build
+        run: docsify init ./docs
 
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
