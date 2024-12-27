@@ -30,7 +30,7 @@ jobs:
         run: npm install -g docsify-cli
 
       - name: Build Docsify site
-        run: docsify init .
+        run: docsify init ./docs
 
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
