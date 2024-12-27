@@ -1,9 +1,5 @@
 .crossnote
 .deprecated
 
-# Ignorar tudo na pasta docs, exceto arquivos que começam com _
-docs/*
-!docs/_*
-
 # Ignorar node_modules
 node_modules/
