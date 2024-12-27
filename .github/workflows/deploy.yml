@@ -3,7 +3,8 @@ name: Deploy Docsify
 on:
   push:
     branches:
-      - main  # ou a branch que você deseja monitorar
+      - main
+  workflow_dispatch:
 
 jobs:
   build:
