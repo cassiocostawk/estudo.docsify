@@ -34,7 +34,7 @@ jobs:
         run: docsify init ./docs
       
       - name: Move Docs
-        run: move doc/* docs/
+        run: mv doc/* ./docs/
 
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
