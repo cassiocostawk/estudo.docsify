@@ -19,8 +19,8 @@ jobs:
           PERSONAL_ACCESS_TOKEN: ${{ secrets.PERSONAL_ACCESS_TOKEN }}
         run: |
           git clone https://$PERSONAL_ACCESS_TOKEN@github.com/cassiocostawk/Estudo.git content
-          mkdir -p docs
-          cp -r content/* docs/
+          mkdir -p docs/_content
+          cp -r content/* docs/docs/
 
       - name: Setup Node.js
         uses: actions/setup-node@v2
